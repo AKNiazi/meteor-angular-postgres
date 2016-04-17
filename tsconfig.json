@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "module": "commonjs",
     "target": "es5",
-    "isolatedModules": false,
     "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
-    "sourceMap": true
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   },
-  "files": [
-    "typings/main.d.ts"
+  "exclude": [
+    "node_modules",
+    ".meteor",
+    "typings/main",
+    "typings/main.d.ts",
+    "typings/jasmine.d.ts",
+    "typings/es6-shim.d.ts",
+    "server",
+    "collections"    // TODO: remove this after removing collections from code
   ]
 }

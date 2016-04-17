@@ -17,8 +17,7 @@ export class Login implements OnInit {
   
   loginForm: ControlGroup;
 
-  constructor( private _loginService: LoginService ) {
-  }
+  constructor( private _loginService: LoginService ) {}
 
   ngOnInit(){
     
@@ -30,11 +29,12 @@ export class Login implements OnInit {
     });
   }
 
-  Authenticate(loginDetail) {
+  Authenticate() {
     
     if (this.loginForm.valid) {
 
       this._loginService.authenticate();
+      
       (<Control>this.loginForm.controls['email']).updateValue('');
       (<Control>this.loginForm.controls['password']).updateValue('');
     }

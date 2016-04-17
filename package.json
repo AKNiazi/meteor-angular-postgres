@@ -2,7 +2,10 @@
   "name": "meteor-angular-postgres",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "build": "tsc",
+    "clean": "rimraf client/**/*.js client/**/*.js.map test/**/*.js test/**/*.js.map",
+    "test": "karma start karma.conf.js"
   },
   "dependencies": {
     "angular": "^1.5.3",
@@ -19,8 +22,17 @@
   },
   "version": "1.0.0",
   "description": "Demo app integrating meteor with postgres and angular2",
-  "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "remap-istanbul": "^0.6.2",
+    "rimraf": "^2.5.2",
+    "systemjs": "^0.19.26",
+    "typescript": "^1.8.10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AKNiazi/meteor-angular-postgres.git"
