@@ -1,0 +1,599 @@
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  max-height: 1000000px;
+}
+
+body {
+  -ms-overflow-style: scrollbar;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.gm-style img {
+  max-width: none;
+}
+
+a {
+  outline: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+}
+
+a:hover,
+a:focus,
+a:active {
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+}
+
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* custom select styles */
+.jcf-select {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid #777;
+  background: #fff;
+  margin: 0 0 12px;
+  min-width: 150px;
+  height: 26px;
+}
+
+.jcf-select select {
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.jcf-select .jcf-select-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  display: block;
+  font-size: 13px;
+  line-height: 26px;
+  margin: 0 35px 0 8px;
+}
+
+.jcf-select .jcf-select-opener {
+  position: absolute;
+  text-align: center;
+  background: #aaa;
+  width: 26px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+body > .jcf-select-drop {
+  position: absolute;
+  margin: -1px 0 0;
+  z-index: 9999;
+}
+
+body > .jcf-select-drop.jcf-drop-flipped {
+  margin: 1px 0 0;
+}
+
+.jcf-select .jcf-select-drop {
+  position: absolute;
+  margin-top: 0px;
+  z-index: 9999;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+}
+
+.jcf-select .jcf-drop-flipped {
+  bottom: 100%;
+  top: auto;
+}
+
+.jcf-select-drop .jcf-select-drop-content {
+  border: 1px solid #f00;
+}
+
+/* multiple select styles */
+.jcf-list-box {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #b8c3c9;
+  min-width: 200px;
+  margin: 0 15px;
+}
+
+/* select options styles */
+.jcf-list {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  background: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.jcf-list .jcf-list-content {
+  vertical-align: top;
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+}
+
+.jcf-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jcf-list ul li {
+  overflow: hidden;
+  display: block;
+}
+
+.jcf-list .jcf-overflow {
+  overflow: auto;
+}
+
+.jcf-list .jcf-option {
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  display: block;
+  padding: 5px 9px;
+  color: #656565;
+  height: 1%;
+}
+
+.jcf-list .jcf-disabled {
+  background: #fff !important;
+  color: #aaa !important;
+}
+
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+  background: #e6e6e6;
+  color: #000;
+}
+
+.jcf-list .jcf-optgroup-caption {
+  white-space: nowrap;
+  font-weight: bold;
+  display: block;
+  padding: 5px 9px;
+  cursor: default;
+  color: #000;
+}
+
+.jcf-list .jcf-optgroup .jcf-option {
+  padding-left: 30px;
+}
+
+/* custom scrollbars styles */
+.jcf-scrollable-wrapper {
+  box-sizing: content-box;
+  position: relative;
+}
+
+.jcf-scrollbar-vertical {
+  position: absolute;
+  cursor: default;
+  background: #e3e3e3;
+  width: 14px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  background: #bbb;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  top: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  top: auto;
+  bottom: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+  background: #888;
+  height: 1px;
+  width: 14px;
+}
+
+.jcf-scrollbar-horizontal {
+  position: absolute;
+  background: #e3e3e3;
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  background: #bbb;
+  height: 14px;
+  width: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+  left: auto;
+  right: 0;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+  display: inline-block;
+  position: relative;
+  height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+  position: absolute;
+  background: #888;
+  height: 14px;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+  visibility: hidden;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec,
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+  background: #e3e3e3;
+}
+
+/* common custom form elements styles */
+.jcf-disabled {
+  background: #ddd !important;
+}
+
+.jcf-focus, .jcf-focus * {
+  border-color: #f00 !important;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: #eee;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#wrapper:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  min-height: 100%;
+}
+
+#wrapper > * {
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 99%;
+}
+
+#wrapper > * {
+  width: 100%;
+}
+
+.block-holder {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  z-index: 100;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: white;
+  padding: 15px;
+  max-width: 320px;
+  margin: 20px auto;
+}
+
+.block-holder h1 {
+  font-weight: 300;
+  margin: 0 0 15px;
+}
+
+.block-holder .btn-holder {
+  overflow: hidden;
+}
+
+.block-holder .btn {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  vertical-align: top;
+  color: white;
+  cursor: pointer;
+  padding: 10px 35px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+}
+
+.block-holder .btn:hover,
+.block-holder .btn:active {
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+}
+
+.block-holder .btn:after {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  font: 18px FontAwesome;
+  content: '';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0;
+  margin: -9px 0 0;
+}
+
+.block-holder .btn.btnfacebook {
+  border-color: #3b5998;
+  background: #3b5998;
+}
+
+.block-holder .btn.btnfacebook:after {
+  content: '\f09a';
+}
+
+.block-holder .btn.btnfacebook:hover,
+.block-holder .btn.btnfacebook:active {
+  background: #314a7e;
+  border-color: #314a7e;
+}
+
+.block-holder .btn.btngoogle {
+  background: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.block-holder .btn.btngoogle:after {
+  content: '\f0d5';
+}
+
+.block-holder .btn.btngoogle:hover,
+.block-holder .btn.btngoogle:active {
+  background: #cf3624;
+  border-color: #cf3624;
+}
+
+.block-holder .or {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: 0;
+  font-style: italic;
+  position: relative;
+  font: 300 italic 16px/20px Georgia, Times New Roman, serif;
+  opacity: 0.7;
+  margin: 5px 0 15px;
+}
+
+.block-holder .or:after,
+.block-holder .or:before {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: 0;
+  content: '-';
+  margin: 0 3px;
+}
+
+.block-holder .btn-register {
+  display: block;
+  overflow: hidden;
+  margin: 10px 0 0;
+}
+
+label {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  font-weight: 400;
+  margin: 0 0 10px;
+  padding: 0 0 0 115px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+label .text {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 115px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #000;
+}
+
+label input {
+  border: 0;
+  background: none;
+  height: 40px;
+  outline: none;
+  float: left;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #999;
+}
+
+label input::-webkit-input-placeholder {
+  color: #999;
+}
+
+label input::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+}
+
+label input:-moz-placeholder {
+  color: #999;
+}
+
+label input:-ms-input-placeholder {
+  color: #999;
+}
+
+label input.placeholder {
+  color: #999;
+}
+
+label.parent-active {
+  border-color: #00c4cc;
+  -webkit-box-shadow: 0 0 3px 0 #00c4cc;
+  box-shadow: 0 0 3px 0 #00c4cc;
+}
+
+label .input-placeholder-text {
+  left: 125px;
+  top: 10px;
+  color: #999;
+}

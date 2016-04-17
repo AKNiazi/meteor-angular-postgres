@@ -1,0 +1,32 @@
+<div id="wrapper">
+  <div class="form-block">
+    <div class="block-holder">
+      <form class="form" [ngFormModel]="loginForm" #f="ngForm" (submit)="Authenticate(f.value)">
+        <fieldset>
+          <h1>Log in</h1>
+          <div class="btn-holder">
+            <button class="btn btn-default btnfacebook" type="button">Connect with Facebook</button>
+            <button class="btn btn-default btngoogle" type="button">Sign in with Google</button>
+          </div>
+          <span class="or">or</span>
+          <div class="row">
+            <div class="col-xs-12">
+              <label for="email">
+                <span class="text">Email</span>
+                <input type="text" placeholder="email" id="email" ngControl="email" name="email">
+              </label>
+              <label for="password">
+                <span class="text">Password</span>
+                <input type="password" placeholder="password" id="password" ngControl="password" name="password">  
+              </label>
+              <input type="submit" value="Log in" class="btn btn-success">
+            </div>
+          </div>
+          <div class="btn-register">
+            <a [routerLink]="['/Register']">Register</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
