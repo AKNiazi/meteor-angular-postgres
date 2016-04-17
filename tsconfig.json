@@ -17,6 +17,6 @@
     "typings/jasmine.d.ts",
     "typings/es6-shim.d.ts",
     "server",
-    "collections"    // TODO: remove this after removing collections from code
+    "collections"
   ]
 }
