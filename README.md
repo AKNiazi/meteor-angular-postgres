@@ -9,8 +9,11 @@ I am assuming that you have installed npm, git, git flow
 3. npm install karma-cli
 4. npm install
 
+## npm commands
+
 5. To run project npm run clean; npm run start;
 6. To test npm run build, npm run test;
+7. npm run tslint 
 
 ## Note
 
