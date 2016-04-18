@@ -4,6 +4,7 @@
   "scripts": {
     "start": "meteor run",
     "build": "tsc",
+    "tslint": "tslint client/**/*.ts",
     "clean": "rimraf client/**/*.js client/**/*.js.map tests/**/*.js tests/**/*.js.map !tests/karma.conf.js !tests/karma-test-shim.js",
     "test": "karma start tests/karma.conf.js"
   },
@@ -23,6 +24,7 @@
   "version": "1.0.0",
   "description": "Demo app integrating meteor with postgres and angular2",
   "devDependencies": {
+    "codelyzer": "0.0.13",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
@@ -31,6 +33,8 @@
     "remap-istanbul": "^0.6.2",
     "rimraf": "^2.5.2",
     "systemjs": "^0.19.26",
+    "tslint": "^3.7.4",
+    "tslint-loader": "^2.1.3",
     "typescript": "^1.8.10"
   },
   "repository": {

@@ -5,7 +5,7 @@ import {FormBuilder, ControlGroup, Validators, Control} from 'angular2/common';
 import {GlobalValidator} from './global-validator.ts';
 import {LoginService} from './login.service.ts';
 
- 
+
 @Component({
   selector: 'login',
   templateUrl: '/client/imports/login/login.html',
@@ -14,15 +14,15 @@ import {LoginService} from './login.service.ts';
 })
 
 export class Login implements OnInit {
-  
+
   loginForm: ControlGroup;
 
   constructor( private _loginService: LoginService ) {}
 
-  ngOnInit(){
-    
+  ngOnInit() {
+
     let login = new FormBuilder();
- 
+
     this.loginForm = login.group({
       email: ['', Validators.compose([Validators.required, GlobalValidator.mailFormat])],
       password: ['', Validators.required]
@@ -30,11 +30,11 @@ export class Login implements OnInit {
   }
 
   Authenticate() {
-    
+
     if (this.loginForm.valid) {
 
       this._loginService.authenticate();
-      
+
       (<Control>this.loginForm.controls['email']).updateValue('');
       (<Control>this.loginForm.controls['password']).updateValue('');
     }

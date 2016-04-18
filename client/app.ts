@@ -7,7 +7,6 @@ import {Login} from './imports/login/login.component.ts';
 import {Register} from './imports/register/register.component.ts';
 import {Sheets} from './imports/sheets/sheets.component.ts';
 
- 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
@@ -19,5 +18,5 @@ import {Sheets} from './imports/sheets/sheets.component.ts';
   { path: '/sheets', as: 'Sheets', component: Sheets }
 ])
 class App {}
- 
+
 bootstrap(App, [ROUTER_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' })]);
