@@ -4,6 +4,6 @@ import {Injectable} from 'angular2/core';
 export class LoginService {
 
   authenticate() {
-    console.log("authenticate done");
+    console.log('authenticate done');
   }
 }
