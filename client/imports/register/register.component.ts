@@ -7,33 +7,33 @@ import {RegisterService} from './register.service.ts';
 
 
 @Component({
-    selector: 'regsiter',
-    templateUrl: '/client/imports/register/register.html',
-    directives: [RouterLink],
-    providers: [RegisterService]
+  selector: 'regsiter',
+  templateUrl: '/client/imports/register/register.html',
+  directives: [RouterLink],
+  providers: [RegisterService]
 })
 
 export class Register implements OnInit {
 
-    registerForm: ControlGroup;
+  registerForm: ControlGroup;
 
-    constructor(private _registerService: RegisterService) { }
+  constructor(private _registerService: RegisterService) { }
 
-    ngOnInit() {
-        let register = new FormBuilder();
-        this.registerForm = register.group({
-            email: ['', Validators.compose([Validators.required, GlobalValidator.mailFormat])],
-            password: ['', Validators.required],
-            cpassword: ['', Validators.required]
-        });
-    }
+  ngOnInit() {
+    let register = new FormBuilder();
+    this.registerForm = register.group({
+      email: ['', Validators.compose([Validators.required, GlobalValidator.mailFormat])],
+      password: ['', Validators.required],
+      cpassword: ['', Validators.required]
+    });
+  }
 
     registerUser() {
-        if (this.registerForm.valid) {
-            this._registerService.register(this.registerForm.value);
-            (<Control>this.registerForm.controls['email']).updateValue('');
-            (<Control>this.registerForm.controls['password']).updateValue('');
-            (<Control>this.registerForm.controls['cpassword']).updateValue('');
-        }
+      if (this.registerForm.valid) {
+        this._registerService.register(this.registerForm.value);
+        (<Control>this.registerForm.controls['email']).updateValue('');
+        (<Control>this.registerForm.controls['password']).updateValue('');
+        (<Control>this.registerForm.controls['cpassword']).updateValue('');
+      }
     }
 }

@@ -1,36 +1,36 @@
 <div id="wrapper">
-    <div class="form-block">
-        <div class="block-holder">
-            <form class="form" [ngFormModel]="registerForm" #r="ngForm" (submit)="registerUser(r.value)">
-                <fieldset>
-                    <h1>Register</h1>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <label for="email">
-                                <span class="text">Email</span>
-                                <input type="text" placeholder="Email" id="email" ngControl="email" name="email">
-                            </label>
-                            <label for="password">
-                                <span class="text">Password</span>
-                                <input type="password" placeholder="Password" id="password" ngControl="password" name="password">
-                            </label>
-                            <label for="cpassword">
-                                <span class="text">Confirm Password</span>
-                                <input type="password" placeholder="Confirm password" id="cpassword" ngControl="cpassword" name="cpassword">
-                            </label>
-                            <input type="submit" value="Register" class="btn btn-success">
-                        </div>
-                    </div>
-                    <span class="or">or</span>
-                    <div class="btn-holder">
-                        <button class="btn btn-default btnfacebook" type="button">Connect with Facebook</button>
-                        <button class="btn btn-default btngoogle" type="button">Sign in with Google</button>
-                    </div>
-                    <div class="btn-register">
-                        <a [routerLink]="['/Login']">Login</a>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+  <div class="form-block">
+    <div class="block-holder">
+      <form class="form" [ngFormModel]="registerForm" #r="ngForm" (submit)="registerUser(r.value)">
+        <fieldset>
+          <h1>Register</h1>
+          <div class="row">
+            <div class="col-xs-12">
+              <label for="email">
+                <span class="text">Email</span>
+                <input type="text" placeholder="Email" id="email" ngControl="email" name="email">
+              </label>
+              <label for="password">
+                <span class="text">Password</span>
+                <input type="password" placeholder="Password" id="password" ngControl="password" name="password">
+              </label>
+              <label for="cpassword">
+                <span class="text">Confirm Password</span>
+                <input type="password" placeholder="Confirm password" id="cpassword" ngControl="cpassword" name="cpassword">
+              </label>
+              <input type="submit" value="Register" class="btn btn-success">
+            </div>
+          </div>
+          <span class="or">or</span>
+          <div class="btn-holder">
+            <button class="btn btn-default btnfacebook" type="button">Connect with Facebook</button>
+            <button class="btn btn-default btngoogle" type="button">Sign in with Google</button>
+          </div>
+          <div class="btn-register">
+            <a [routerLink]="['/Login']">Login</a>
+          </div>
+        </fieldset>
+      </form>
     </div>
+  </div>
 </div>
