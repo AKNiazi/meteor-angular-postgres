@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import {Component, OnInit} from 'angular2/core';
 import {RouterLink} from 'angular2/router';
 import {FormBuilder, ControlGroup, Validators, Control} from 'angular2/common';
-import {GlobalValidator} from '../login/global-validator.ts';
+import {GlobalValidator} from '../core/global-validator.ts';
 import {RegisterService} from './register.service.ts';
 
 
