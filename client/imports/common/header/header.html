@@ -1,0 +1,28 @@
+<div class="header-holder">
+  <ul class="nav main-nav">
+    <li (click)="$event.preventDefault()">
+      <span dropdown (on-toggle)="toggled($event)">
+        <a class="user" href id="simple-dropdown" dropdownToggle>
+          <div class="img-holder">
+            <img src="/images/avatar.png" class="img-responsive"></div>
+          <div class="text-holder">
+            Abdullah Khan
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>              
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
+          <li>
+            <div class="user">
+              <div class="img-holder"><img src="assets/images/avatar.png" alt="image description" class="img-responsive"></div>
+              <div class="text-holder">
+                Abdullah Khan
+                <div class="link-holder"><a href="#" class="setting">Setting</a></div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="btn btn-warning">Sign Out</a></li>
+        </ul>
+      </span>
+    </li>
+  </ul>
+</div>
