@@ -1,7 +1,7 @@
 <div id="wrapper">
   <div class="form-block">
     <div class="block-holder">
-      <form class="form" [ngFormModel]="loginForm" #f="ngForm" (submit)="Authenticate(f.value)">
+      <form class="form" [ngFormModel]="loginForm" #f="ngForm" (ngSubmit)="Authenticate(f.value)">
         <fieldset>
           <h1>Log in</h1>
           <div class="btn-holder">

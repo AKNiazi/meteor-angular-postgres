@@ -1,0 +1,64 @@
+<form class="form" [ngFormModel]="sheetForm" #f="ngForm" (ngSubmit)="create(f.value)">
+  <fieldset>
+    <div class="row">
+      <div class="col-xs-12">
+        <label for="title">
+          <span class="text">Title</span>
+          <input type="text" placeholder="Title" id="title" ngControl="title">
+        </label>
+        <label for="start">
+          <span class="text">Start</span>
+          <input type="text" placeholder="Title" id="start" ngControl="start">  
+        </label>
+        <label for="end">
+          <span class="text">End</span>
+          <input type="text" placeholder="Title" id="end" ngControl="end">  
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-left">
+          <h5>Share With</h5>
+        </div>
+        <div class="select-holder">
+          <select class="form-control">
+            <option>User 1</option>
+            <option>User 2</option>
+            <option>User 1</option>
+          </select>
+          <a href="#" class="link">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="select-holder">
+          <select class="form-control">
+            <option>User 2</option>
+            <option>User 1</option>
+          </select>
+          <a href="#" class="link">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="select-holder">
+          <select class="form-control">
+            <option>Add More</option>
+            <option>User 1</option>
+          </select>
+        </div>
+        <a class="btn btn-info btn-add" (click)="addUser()">
+          <i class="fa fa-plus" aria-hidden="true"></i> 
+          Add New
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="btn-holder">
+          <input type="button" value="Cancel" class="btn btn-primary" [routerLink]="['/Sheets']">
+          <input type="submit" value="Save" class="btn btn-success">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>

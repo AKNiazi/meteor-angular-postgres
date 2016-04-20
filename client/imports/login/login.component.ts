@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import {Component, OnInit} from 'angular2/core';
-import {RouterLink} from 'angular2/router';
+import {RouterLink, Router} from 'angular2/router';
 import {FormBuilder, ControlGroup, Validators, Control} from 'angular2/common';
-import {GlobalValidator} from '../core/global-validator.ts';
+import {GlobalValidator} from '../../core/global-validator.ts';
 import {LoginService} from './login.service.ts';
 
 
@@ -17,7 +17,7 @@ export class Login implements OnInit {
 
   loginForm: ControlGroup;
 
-  constructor( private _loginService: LoginService ) {}
+  constructor( private _loginService: LoginService, private _router: Router ) {}
 
   ngOnInit() {
 
@@ -37,6 +37,8 @@ export class Login implements OnInit {
 
       (<Control>this.loginForm.controls['email']).updateValue('');
       (<Control>this.loginForm.controls['password']).updateValue('');
+
+      this._router.navigate(['Sheets']);
     }
   }
 }

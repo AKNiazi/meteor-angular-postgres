@@ -6,6 +6,7 @@ import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'a
 import {Login} from './imports/login/login.component.ts';
 import {Register} from './imports/register/register.component.ts';
 import {Sheets} from './imports/sheets/sheets.component.ts';
+import {NewSheet} from './imports/new-sheet/new-sheet.component.ts';
 
 @Component({
   selector: 'app',
@@ -15,7 +16,9 @@ import {Sheets} from './imports/sheets/sheets.component.ts';
 @RouteConfig([
   { path: '/login', as: 'Login', component: Login, useAsDefault: true },
   { path: '/register', as: 'Register', component: Register },
-  { path: '/sheets', as: 'Sheets', component: Sheets }
+  { path: '/sheets', as: 'Sheets', component: Sheets },
+  { path: '/sheets/new', as: 'NewSheet', component: NewSheet }
+
 ])
 class App {}
 
